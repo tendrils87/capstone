@@ -4,8 +4,6 @@ import Header from './login'
 import { useState } from 'react';
 import MenuHeader from './menuHeader';
 
-export const port=process.env.PORT || 3000; 
-
 function App() {
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");

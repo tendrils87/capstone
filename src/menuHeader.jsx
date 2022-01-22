@@ -8,7 +8,7 @@ const MenuHeader = (props) => {
     const [blogPosts, setBlogPosts] = useState([]);
     const fetchData = useCallback(async () => {
         console.log('fetching')
-        const posts = await fetch(`http://localhost:${port}/posts/${props.postFilter}/${props.userid}`)
+        const posts = await fetch(`https://glacial-thicket-51033.herokuapp.com/posts/${props.postFilter}/${props.userid}`)
         const jsonPosts = await posts.json();
         setBlogPosts(jsonPosts);
 

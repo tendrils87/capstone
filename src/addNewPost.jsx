@@ -26,7 +26,7 @@ const AddNewPost = (props) => {
             userid: props.userid
             }
         console.log(data);
-        await fetch('http://localhost:3001/createpost', {
+        await fetch('https://glacial-thicket-51033.herokuapp.com/createpost', {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',

@@ -30,7 +30,7 @@ const CreateAccount = (props) => {
                     password: password,
                     firstname: firstName,
                     lastname: lastName }
-        await fetch(`http://localhost:${port}/newuser`, {
+        await fetch(`https://glacial-thicket-51033.herokuapp.com/newuser`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

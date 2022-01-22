@@ -37,7 +37,7 @@ const Post = (props) => {
             post_id: props.post.post_id
             }
         console.log(data);
-        await fetch(`http://localhost:${port}/posts/editpost`, {
+        await fetch(`https://glacial-thicket-51033.herokuapp.com/posts/editpost`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ const Post = (props) => {
             post_id: props.post.post_id
             }
         console.log(data);
-        await fetch(`http://localhost:${port}/deletepost`, {
+        await fetch(`https://glacial-thicket-51033.herokuapp.com/deletepost`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',
