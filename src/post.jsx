@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
-
+import { port } from "./App";
 const style = {
     position: 'absolute',
     top: '50%',
@@ -37,7 +37,7 @@ const Post = (props) => {
             post_id: props.post.post_id
             }
         console.log(data);
-        await fetch('http://localhost:3001/posts/editpost', {
+        await fetch(`http://localhost:${port}/posts/editpost`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ const Post = (props) => {
             post_id: props.post.post_id
             }
         console.log(data);
-        await fetch('http://localhost:3001/deletepost', {
+        await fetch(`http://localhost:${port}/deletepost`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',

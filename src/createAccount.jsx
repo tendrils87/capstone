@@ -1,3 +1,4 @@
+import { port } from "./App";
 import React from "react";
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -29,7 +30,7 @@ const CreateAccount = (props) => {
                     password: password,
                     firstname: firstName,
                     lastname: lastName }
-        await fetch('http://localhost:3001/newuser', {
+        await fetch(`http://localhost:${port}/newuser`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

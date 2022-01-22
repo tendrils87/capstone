@@ -1,5 +1,7 @@
+import { port } from "./App";
+
 const login = async (props) => {
-    let response= await fetch(`http://localhost:3001/login/${props.username}/${props.password}`)
+    let response= await fetch(`http://localhost:${port}/login/${props.username}/${props.password}`)
     let user = await response.json();
     if(typeof user[0] === 'undefined'){
       props.setUserName("");

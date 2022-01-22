@@ -2,12 +2,13 @@ import React from "react";
 import AddNewPost from "./addNewPost";
 import { useState, useCallback, useEffect } from "react";
 import Body from "./posts";
+import { port } from "./App";
 const MenuHeader = (props) => {
     const [addNewPost, setAddNewPost] = useState(false);
     const [blogPosts, setBlogPosts] = useState([]);
     const fetchData = useCallback(async () => {
         console.log('fetching')
-        const posts = await fetch(`http://localhost:3001/posts/${props.postFilter}/${props.userid}`)
+        const posts = await fetch(`http://localhost:${port}/posts/${props.postFilter}/${props.userid}`)
         const jsonPosts = await posts.json();
         setBlogPosts(jsonPosts);
 
